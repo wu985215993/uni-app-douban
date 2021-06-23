@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/login/login",
+    "pages/todolist/todolist",
+    "pages/index/index",
+    "pages/list/list",
+    "pages/top/top",
+    "pages/my/my"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "static/imgs/ic_tab_home_normal.png",
+        "selectedIconPath": "static/imgs/ic_tab_home_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/top/top",
+        "iconPath": "static/imgs/ic_tab_shiji_normal.png",
+        "selectedIconPath": "static/imgs/ic_tab_shiji_active.png",
+        "text": "榜单"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "static/imgs/ic_tab_profile_normal.png",
+        "selectedIconPath": "static/imgs/ic_tab_profile_active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
