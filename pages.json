@@ -1,12 +1,21 @@
 {
   "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
     {
+        "path" : "pages/search/search",
+        "style" :                                                                                    
+        {
+            "navigationBarTitleText": "搜索",
+            "enablePullDownRefresh": false,
+            "navigationBarTextStyle": "white",
+            "navigationBarBackgroundColor": "#42BD55"
+        }
+        
+    },{
       "path": "pages/home/home",
       "style": {
-        "navigationBarTitleText": "",
         "enablePullDownRefresh": false,
-        "navigationBarBackgroundColor":"#42BD55",
-        "navigationBarTextStyle":"white",
+        "navigationBarBackgroundColor": "#42BD55",
+        "navigationBarTextStyle": "white",
         "navigationBarTitleText": "首页"
       }
 
@@ -36,32 +45,49 @@
     , {
       "path": "pages/list/list",
       "style": {
-        "navigationBarTitleText": "",
-        "enablePullDownRefresh": false
+        "enablePullDownRefresh": true,
+        "navigationBarTitleText": "默认标题"
       }
 
     }, {
       "path": "pages/top/top",
       "style": {
-        "navigationBarTitleText": "",
         "enablePullDownRefresh": false,
-        "navigationBarBackgroundColor":"#42BD55",
-        "navigationBarTextStyle":"white",
+        "navigationBarBackgroundColor": "#42BD55",
+        "navigationBarTextStyle": "white",
         "navigationBarTitleText": "榜单"
       }
 
     }, {
       "path": "pages/my/my",
       "style": {
-        "navigationBarTitleText": "",
         "enablePullDownRefresh": false,
-        "navigationBarBackgroundColor":"#42BD55",
-        "navigationBarTextStyle":"white",
+        "navigationBarBackgroundColor": "#42BD55",
+        "navigationBarTextStyle": "white",
         "navigationBarTitleText": "我的"
       }
 
     }
-  ],
+      ,{
+            "path" : "pages/details/details",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        
+        ,{
+            "path" : "components/search-item/search-item",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
   "tabBar": {
     "color": "#7A7E83",
     "selectedColor": "#3cc51f",

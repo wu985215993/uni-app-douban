@@ -1,19 +1,21 @@
 <template>
-  <view>
-    榜单
-  </view>
+  <view>top{{ text }}</view>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        
-      };
+import { createNamespacedHelpers } from 'vuex';
+const {mapActions,} = createNamespacedHelpers('test')
+
+export default {
+  data() {
+    return {};
+  },
+  computed: {
+    text() {
+      return this.$store.state.text;
     }
   }
+};
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>

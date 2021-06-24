@@ -1,1 +1,1 @@
-<view></view>
+<view class="list-wrapper"><block wx:for="{{list}}" wx:for-item="item" wx:for-index="__i0__" wx:key="_id"><movie-item vue-id="{{'2e637200-1-'+__i0__}}" movieImg="{{item.movieImg}}" title="{{item.title}}" stars="{{item.stars}}" average="{{item.average}}" bind:__l="__l"></movie-item></block><block wx:if="{{list.length}}"><view class="bottomSign"><block wx:if="{{!done}}"><view>正在加载中</view></block><block wx:else><view>我是有底线的</view></block></view></block></view>

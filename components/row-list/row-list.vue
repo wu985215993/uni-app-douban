@@ -1,9 +1,9 @@
 <template>
   <view class="row-list">
-    <view class="row-list-header">
+    <view class="row-list-header" @click="goToList">
       <view>{{ type }}</view>
       <view>
-        <text>查看更多</text>
+        <text class="more">查看更多</text>
         <image src="../../static/imgs/ic_arrow_green_right.png"></image>
       </view>
     </view>
@@ -43,6 +43,11 @@ export default {
       const data = await api();
       uni.hideLoading()
       this.list = data.rows;
+    },
+    goToList(){
+      uni.navigateTo({
+        url: `../../pages/list/list?type=${this.type}`
+      })
     }
   }
 };
@@ -64,7 +69,7 @@ export default {
       height: 20rpx;
       margin-left: 10rpx;
     }
-    text {
+    .more {
       color: #2b9c34;
     }
   }

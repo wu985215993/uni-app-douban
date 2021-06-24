@@ -47,7 +47,7 @@
   height: 20rpx;
   margin-left: 10rpx;
 }
-.row-list .row-list-header text {
+.row-list .row-list-header .more {
   color: #2b9c34;
 }
 .row-list .movies {

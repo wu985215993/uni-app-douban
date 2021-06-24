@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "搜索",
+  "enablePullDownRefresh": false,
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#42BD55",
+  "usingComponents": {
+    "search-item": "/components/search-item/search-item"
+  }
+}

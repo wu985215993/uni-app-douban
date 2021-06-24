@@ -1,5 +1,7 @@
 {
-  "navigationBarTitleText": "",
-  "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "默认标题",
+  "usingComponents": {
+    "movie-item": "/components/movie-item/movie-item"
+  }
 }

@@ -17,3 +17,8 @@ export const getComingMoviesApi = (params = {
 }) => request(`/movies/coming?start=${params.start}&count=${params.count}`,{
   method:'GET'
 })
+//搜索电影
+export const searchMoviesApi = params => request(`/movies/searchMovies`,{
+  method:'POST',
+  data:params
+})

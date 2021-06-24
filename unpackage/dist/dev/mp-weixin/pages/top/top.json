@@ -1,7 +1,7 @@
 {
-  "navigationBarTitleText": "榜单",
   "enablePullDownRefresh": false,
   "navigationBarBackgroundColor": "#42BD55",
   "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "榜单",
   "usingComponents": {}
 }

@@ -1,1 +1,1 @@
-<view>榜单</view>
+<view>{{"top"+text}}</view>

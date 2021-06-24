@@ -3,13 +3,7 @@
     <image :src="movieImg" class="cover"></image>
     <view class="title">{{ title }}</view>
     <view class="stars-and-score">
-      <view class="stars-wrapper">
-        <image src="../../static/imgs/rating_star_xsmall_on.png" class="star"></image>
-        <image src="../../static/imgs/rating_star_xsmall_on.png" class="star"></image>
-        <image src="../../static/imgs/rating_star_xsmall_on.png" class="star"></image>
-        <image src="../../static/imgs/rating_star_xsmall_on.png" class="star"></image>
-        <image src="../../static/imgs/rating_star_xsmall_on.png" class="star"></image>
-      </view>
+      <view class="stars-wrapper"><image v-for="(item, index) in renderStars" :src="item" :key="index" class="star"></image></view>
       <text>{{ average }}</text>
     </view>
   </view>
@@ -38,6 +32,22 @@ export default {
   },
   data() {
     return {};
+  },
+  computed: {
+    renderStars() {
+      const pathArr = [];
+      for (let i = 0; i < this.stars[0]; i++) {
+        pathArr.push('../../static/imgs/rating_star_xsmall_on.png'); //全星
+      }
+      if (this.stars[1] === '5') {
+        pathArr.push('../../static/imgs/rating_star_xsmall_half.png'); //半星
+      }
+      let len = pathArr.length;
+      for (let i = 5; i > len; i--) {
+        pathArr.push('../../static/imgs/rating_star_xsmall_off.png'); //灰色星
+      }
+      return pathArr;
+    }
   }
 };
 </script>
@@ -64,7 +74,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text{
+    text {
       color: #8a8a8a;
       font-size: 22rpx;
     }
