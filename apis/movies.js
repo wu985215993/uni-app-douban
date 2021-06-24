@@ -22,3 +22,7 @@ export const searchMoviesApi = params => request(`/movies/searchMovies`,{
   method:'POST',
   data:params
 })
+//获取电源盒详情
+export const getMovieDetailApi = id => request(`/movies/detail?_id=${id}`,{
+  method:'GET'
+})

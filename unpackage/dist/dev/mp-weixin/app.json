@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/details/details",
     "pages/search/search",
     "pages/home/home",
     "pages/login/login",
@@ -8,7 +9,6 @@
     "pages/list/list",
     "pages/top/top",
     "pages/my/my",
-    "pages/details/details",
     "components/search-item/search-item"
   ],
   "subPackages": [],

@@ -10063,7 +10063,7 @@ module.exports = g;
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.searchMoviesApi = exports.getComingMoviesApi = exports.getHotMoviesApi = exports.loginApi = void 0;var _request = _interopRequireDefault(__webpack_require__(/*! ../utils/request.js */ 31));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+Object.defineProperty(exports, "__esModule", { value: true });exports.getMovieDetailApi = exports.searchMoviesApi = exports.getComingMoviesApi = exports.getHotMoviesApi = exports.loginApi = void 0;var _request = _interopRequireDefault(__webpack_require__(/*! ../utils/request.js */ 31));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 //登录
 var loginApi = function loginApi(data) {return (0, _request.default)("/users/login", {
     data: data });};
@@ -10085,7 +10085,11 @@ exports.getHotMoviesApi = getHotMoviesApi;var getComingMoviesApi = function getC
 //搜索电影
 exports.getComingMoviesApi = getComingMoviesApi;var searchMoviesApi = function searchMoviesApi(params) {return (0, _request.default)("/movies/searchMovies", {
     method: 'POST',
-    data: params });};exports.searchMoviesApi = searchMoviesApi;
+    data: params });};
+
+//获取电源盒详情
+exports.searchMoviesApi = searchMoviesApi;var getMovieDetailApi = function getMovieDetailApi(id) {return (0, _request.default)("/movies/detail?_id=".concat(id), {
+    method: 'GET' });};exports.getMovieDetailApi = getMovieDetailApi;
 
 /***/ }),
 
