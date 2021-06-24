@@ -6,7 +6,7 @@
         <image src="../../static/imgs/ic_search.png" class="search__bar__icon"></image>
       </view>
     </view>
-    <view class="search__list">
+    <view class="search__list" @click="jumpToMovieDetail">
       <view class="search__item" v-for="item in searchList" :key="item._id">
         <searchItem :movieImg="item.movieImg" :stars="item.stars" :average="item.average"
         :title="item.title"
@@ -14,6 +14,7 @@
         :genres="item.genres"
         :directors="item.directors"
         :casts="item.casts"
+		:data-id='item._id'
         />
       </view>
       <view v-if="!searchList.length" :style="{textAlign:'center'}">未搜索到结果</view>
@@ -48,7 +49,15 @@
         uni.hideLoading()
         this.searchList = data.rows;
       }
-    }
+    },
+	methods:{
+		jumpToMovieDetail(e){
+			const id = e.target.dataset.id;
+			uni.navigateTo({
+				url:`/pages/details/details?id=${id}`
+			})
+		}
+	}
   }
 </script>
 
